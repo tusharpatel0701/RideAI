@@ -83,8 +83,7 @@ public class DriverController {
                                 driver.getLongitude())))
                 .filter(entry -> Double.isFinite(entry.getValue())
                         && entry.getValue() <= radiusKm)
-                .sorted(Comparator.comparingDouble(
-                        Map.Entry<Driver, Double>::getValue))
+                .sorted(Comparator.comparingDouble(Map.Entry<Driver, Double>::getValue))
                 .map(Map.Entry::getKey)
                 .toList();
     }

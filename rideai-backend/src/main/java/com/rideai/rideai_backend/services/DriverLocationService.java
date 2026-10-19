@@ -28,8 +28,7 @@ public class DriverLocationService {
     }
 
     public String getLocation(Long driverId) {
-        return redisTemplate.opsForValue()
-                .get("driver:location:" + driverId);
+        return redisTemplate.opsForValue().get("driver:location:" + driverId);
     }
 }
 
